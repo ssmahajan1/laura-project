@@ -15,7 +15,7 @@ library(ConsensusClusterPlus)
 
 source("C:/Users/ssmah/OneDrive - University of Tennessee/Sid/laura-project/R_functions.R")
 #C:\Users\ssmah\OneDrive - University of Tennessee\Sid\laura-project
-#setwd("C:/Users/ssmah/OneDrive - University of Tennessee/Medical School/Research/Genomics_Project/Laura")
+setwd("C:/Users/ssmah/OneDrive - University of Tennessee/Laura/Sid/laura-project")
 
 # get file names and extract samples from each
 files = list.files(path="./", pattern="*\\.sf", recursive=T)
@@ -209,7 +209,7 @@ print(p + ggtitle("VST Normalized Expression"))
 
 # built in DESeq2 functions
 
-CA(vsd, intgroup=c("group"), ntop=1000) + geom_text(aes(label=name),vjust=2)
+plotPCA(vsd, intgroup=c("group"), ntop=1000) + geom_text(aes(label=name),vjust=2)
 
 CA(vsd, intgroup=c("tissue"), ntop=1000) + geom_text(aes(label=name),vjust=2)
 
